@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Verdana, sans-serif;
+  color: beige;
+}
+
+body {
+  background-image: url(design/teglafal.jpg);
+}
+
+h1 {
+  font-family: Garamond;
+  padding-top: 30px;
+  padding-left: 30px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-size: 32px;
+  text-align: left;
+}
+
+.nav-li {
+  list-style: none;
+  border: 1px solid #5b5b5b;
+  padding: 5px;
+  padding-left: 20px;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+}
+
+.nav-li:hover {
+  background-color: #3b3b3b;
+}
+
+.nav-li:hover a {
+  color: white;
+}
+
+img {
+  width: 150px;
+  float: left;
+  border: 1px solid #3b3b3b;
+  padding: 3px;
+}
+
+ul {
+  display: grid;
+  gap: 3px;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+  max-width: 1000px;
+  background-color: #333333;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "h h"
+    "a n"
+    "f f";
+}
+
+header {
+  background-image: url(design/beer-new_401732638.jpg);
+  background-size: cover;
+  height: 300px;
+  grid-area: h;
+  border: 1px solid #3b3b3b;
+}
+
+article {
+  grid-area: a;
+  background-color: black;
+  padding: 10px;
+  border: 1px solid #3b3b3b;
+}
+
+article li {
+  font-size: 10px;
+  text-align: justify;
+  list-style: square;
+  margin-left: 30px;
+}
+
+article h5 {
+  font-size: 15px;
+}
+
+.article-div {
+  padding: 10px;
+}
+
+nav {
+  grid-area: n;
+  padding: 10px;
+  border: 1px solid #3b3b3b;
+}
+
+footer {
+  grid-area: f;
+  border: 1px solid #3b3b3b;
+  background-color: #6d6d6d;
+  padding: 10px;
+  text-align: center;
+}
+
+table {
+  border: 1px solid #3b3b3b;
+  border-collapse: collapse;
+  font-size: 10px;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+td,
+th {
+  border: 1px solid #3b3b3b;
+}
+
+tr:nth-child(even) {
+  background-color: #5b5b5b;
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "h"
+      "n"
+      "a"
+      "f";
+  }
+}
